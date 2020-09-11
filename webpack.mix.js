@@ -19,3 +19,6 @@ mix.copyDirectory('resources/images', 'public/images');
 if (mix.inProduction()) {
     mix.version();
 }
+
+//
+mix.setResourceRoot('/sites/bpsearch/public');
