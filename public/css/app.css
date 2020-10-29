@@ -9969,14 +9969,14 @@ h3 {
 }
 /* Main banner bg */
 .main-banner-bg {
-  background-image: url("/images/bg/main_banner_bg.svg");
+  background-image: url("images/bg/main_banner_bg.svg");
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .block-decor-lt {
-  background-image: url("/images/bg/block_decor_lt.svg");
+  background-image: url("images/bg/block_decor_lt.svg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
