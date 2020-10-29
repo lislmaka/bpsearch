@@ -23,4 +23,4 @@ if (mix.inProduction()) {
 }
 
 //
-mix.setResourceRoot('/sites/bpsearch/public');
+//mix.setResourceRoot('/sites/bpsearch/public');
