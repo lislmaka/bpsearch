@@ -8,6 +8,8 @@
 
 @section('content')
 
-@include('frontend.welcome.content')
+@include('frontend.welcome.how_it_works')
+@include('frontend.welcome.sales')
+@include('frontend.welcome.reviews')
 
 @endsection
