@@ -10901,15 +10901,22 @@ a.text-dark:focus {
 
 /* Main banner bg */
 
-.main-banner-bg {
-  background-image: url(/sites/bpsearch/public/images/main_banner_bg.svg?a4a2165b4bf44c996fb984cbfbfa6a6d);
+.main-banner-bg-desktop {
+  background-image: url(/images/main_banner_bg_desktop.svg?a4a2165b4bf44c996fb984cbfbfa6a6d);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main-banner-bg-mobile {
+  background-image: url(/images/main_banner_bg_mobile.svg?ca39fe91cbf69d447612fe1ab0db9ce9);
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .block-decor-lt {
-  background-image: url(/sites/bpsearch/public/images/block_decor_lt.svg?4fd6a78ea8080e52652b57d118e6115d);
+  background-image: url(/images/block_decor_lt.svg?4fd6a78ea8080e52652b57d118e6115d);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;

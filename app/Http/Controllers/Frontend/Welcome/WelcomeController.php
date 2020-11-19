@@ -33,7 +33,9 @@ class WelcomeController extends Controller
 
         $view_data = array(
             'faces' => $faces,
-            'projects' => $projects
+            'projects' => $projects,
+            'description' => 'Расскажите о своей идее, действующем бизнесе либо стартапе и найдите команду партнеров и инвесторов',
+            'title' => 'Сервис для поиска парнеров и инвесторов'
         );
 
         return view('frontend.welcome.layout', $view_data);

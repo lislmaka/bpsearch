@@ -1,11 +1,20 @@
 /* Main banner bg */
-.main-banner-bg {
-    background-image: url("images/bg/main_banner_bg.svg");
+.main-banner-bg-desktop {
+    background-image: url("images/bg/main_banner_bg_desktop.svg");
 
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.main-banner-bg-mobile {
+    background-image: url("images/bg/main_banner_bg_mobile.svg");
+
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 
 .block-decor-lt {
     background-image: url("images/bg/block_decor_lt.svg");

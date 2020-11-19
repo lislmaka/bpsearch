@@ -18,19 +18,10 @@
 <div class="row mt-5">
 
     <div class="col-md-5">
-        <div class="card shadow-lg" data-aos="fade-down" data-aos-duration="1000" data-aos-mirror="true"
-            data-aos-once="false">
+        <div class="card shadow-lg mb-3">
             <div class="card-header font-weight-bold lead">
-                Уже нашли инвестиции
+                Обсуждаемые проекты
             </div>
-            <!-- <div class="card-header font-weight-bold lead d-flex justify-content-between">
-                    Уже нашли инвестиции
-                    <h4>
-                        <span class="badge alert-info px-2 py-1 rounded-sm font-weight-normal">
-                            <?php echo number_format(rand(1000, 10000), 0, '', ' '); ?>
-                        </span>
-                    </h4>
-                </div> -->
             <div class="card-body p-0">
                 <div id="carouselExampleControls2" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
@@ -56,26 +47,41 @@
 
                                     <ul class="list-group list-group-flush">
                                         <li class="list-group-item d-flex justify-content-between align-items-center">
-                                            Сумма инвестиций
-                                            <span class="alert-info px-2 py-1 rounded-sm font-weight-normal">
-                                                <?php echo number_format(rand(100000, 10000000), 0, '', ' '); ?>
-                                                <i class="fas fa-ruble-sign"></i>
+                                            Инициатор проекта
+                                            <span class="badge alert-info">
+                                                {{ $project->user->name }}
                                             </span>
                                         </li>
                                         <li class="list-group-item d-flex justify-content-between align-items-center">
                                             Интересуются проектом
-                                            <span class="alert-info px-2 py-1 rounded-sm font-weight-normal">
-                                                <?php echo number_format(rand(1000, 10000), 0, '', ' '); ?>
+                                            <span class="badge alert-info">
+                                                <?php echo number_format(rand(10, 100), 0, '', ' '); ?>
                                             </span>
                                         </li>
                                         <li class="list-group-item d-flex justify-content-between align-items-center">
                                             Активность по проекту
-                                            <span class="alert-info px-2 py-1 rounded-sm font-weight-normal">
+                                            <span class="badge alert-info">
                                                 <?php echo number_format(rand(7, 10), 0, '', ' '); ?>
                                             </span>
                                         </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            Отрасль
+                                            <span class="badge alert-info">
+                                                Финансы
+                                            </span>
+                                        </li>
                                     </ul>
-                                    <div class="card-footer text-muted border-top">
+                                    <div class="card-footer text-muted border-top d-block d-md-none text-center">
+                                        @php
+                                            (shuffle($faces))
+                                        @endphp
+                                        @foreach($faces as $face)
+                                            @if($loop->index < 4)
+                                                <img src="{{ $face }}" class="img-thumbnail rounded-circle">
+                                            @endif
+                                        @endforeach
+                                    </div>
+                                    <div class="card-footer text-muted border-top d-none d-md-block">
                                         @php
                                             (shuffle($faces))
                                         @endphp
@@ -105,55 +111,28 @@
         <!--  -->
         <div class="card border-0 mb-3 bg-transparent">
             <div class="card-body">
-                <div class="card-title d-flex align-items-baseline">
-                    <span class="h3">
-                        <span class="badge badge-info text-white">Разместите</span>
-                    </span>
-                    <span class="font-weight-bold lead px-1">
-                        свой проект
-                    </span>
+                <div class="card-title h3">
+                    Разместите свой проект
                 </div>
                 <p class="card-text">
                     Сделайте первый шаг к успешной реализации проекта - зарегистрируйтесь и бесплатно разместите свой
                     проект
                 </p>
 
-                <div class="card-title d-flex align-items-baseline">
-                    <span class="h3">
-                        <span class="badge badge-info text-white">Расскажите</span>
-                    </span>
-                    <span class="font-weight-bold lead px-1">
-                        о себе
-                    </span>
+                <div class="card-title h3">
+                    Расскажите о себе
                 </div>
                 <p class="card-text">
                     Инициатор проекта это ключевое звено всего проекта в целом. Раскажите кратко о себе и о ваших
                     знаниях которые пригодятся для реализации проекта
                 </p>
 
-                <div class="card-title d-flex align-items-baseline">
-                    <span class="h3">
-                        <span class="badge badge-info text-white">Двигайтесь</span>
-                    </span>
-                    <span class="font-weight-bold lead px-1">
-                        к поставленной цели
-                    </span>
+                <div class="card-title h3">
+                    Двигайтесь к поставленной цели
                 </div>
                 <p class="card-text">
                     Парнерам и потенциальным инвесторам нравятся живие проекты. Публикуйте изменения по проекту и тем
                     самым давайте понять окружающим что проект живет и развивается
-                </p>
-                <div class="card-title d-flex align-items-baseline">
-                    <span class="h3">
-                        <span class="badge badge-info text-white">Общайтесь</span>
-                    </span>
-                    <span class="font-weight-bold lead px-1">
-                        и ищите партнеров и инвесторов
-                    </span>
-                </div>
-                <p class="card-text">
-                    Общайтесь с потенциальными партнерами заинтересованными
-                    инвесторами
                 </p>
             </div>
         </div>
@@ -165,7 +144,7 @@
     <div class="btn-group" role="group" aria-label="Basic example">
         <a class="btn btn-lg btn-primary" href="#" role="button">
             <span class="h4">
-                Добавить проект
+                Разместить проект
             </span>
         </a>
         <a class="btn btn-lg btn-light" href="#" role="button">
@@ -177,7 +156,7 @@
 </div>
 
 <!-- M begin -->
-<div class="text-center d-block d-md-none">
+<div class="text-center d-block d-md-none mx-3">
     <div class="btn-group" role="group" aria-label="Basic example">
         <a class="btn btn-primary" href="#" role="button">
             <span class="">

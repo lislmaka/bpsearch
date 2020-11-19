@@ -9,6 +9,7 @@
 @section('content')
 
 @include('frontend.welcome.how_it_works')
+@include('frontend.welcome.audience')
 @include('frontend.welcome.sales')
 @include('frontend.welcome.reviews')
 

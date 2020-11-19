@@ -22,3 +22,8 @@ Route::get('/', 'Frontend\Welcome\WelcomeController@index')->name('welcome');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+//
+Route::fallback(function () {
+    abort(404);
+});
